@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://ce5u2nw63gipo"]
+
+[ext_resource type="Script" uid="uid://cejoac0qxfvro" path="res://Scripts/TestInercia.gd" id="1_wqrfj"]
+[ext_resource type="Script" uid="uid://rfojv0w5xt7i" path="res://Scripts/Disco.gd" id="2_0vsan"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_otrat"]
+radius = 24.0
+
+[node name="TestInercia" type="Node2D" unique_id=2031487385]
+script = ExtResource("1_wqrfj")
+
+[node name="Disco" type="RigidBody2D" parent="." unique_id=442155504]
+gravity_scale = 0.0
+continuous_cd = 1
+script = ExtResource("2_0vsan")
+
+[node name="Colision" type="CollisionShape2D" parent="Disco" unique_id=1869459192]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_otrat")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=803673835]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1699938342]
+build_mode = 1
+polygon = PackedVector2Array(0, 0, 1152, 0, 1152, 648, 0, 648)
+
+[node name="SpawnPoint" type="Marker2D" parent="." unique_id=200158687]
+position = Vector2(250, 350)
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1815674449]
+
+[node name="PanelControl" type="PanelContainer" parent="UI" unique_id=1834410505]
+custom_minimum_size = Vector2(240, 200)
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/PanelControl" unique_id=1007538736]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/PanelControl/MarginContainer" unique_id=297649532]
+layout_mode = 2
+
+[node name="LabelTitulo" type="Label" parent="UI/PanelControl/MarginContainer/VBoxContainer" unique_id=983185136]
+layout_mode = 2
+
+[node name="LabelInfo" type="Label" parent="UI/PanelControl/MarginContainer/VBoxContainer" unique_id=367945902]
+layout_mode = 2
+
+[node name="HBoxFriccion" type="HBoxContainer" parent="UI/PanelControl/MarginContainer/VBoxContainer" unique_id=1015534877]
+layout_mode = 2
+
+[node name="LabelFriccion" type="Label" parent="UI/PanelControl/MarginContainer/VBoxContainer/HBoxFriccion" unique_id=2094923761]
+layout_mode = 2
+
+[node name="SliderFriccion" type="HSlider" parent="UI/PanelControl/MarginContainer/VBoxContainer/HBoxFriccion" unique_id=84687870]
+custom_minimum_size = Vector2(120, 20)
+layout_mode = 2
+max_value = 3.0
+step = 0.1
+
+[node name="HBoxBotones" type="HBoxContainer" parent="UI/PanelControl/MarginContainer/VBoxContainer" unique_id=1701326715]
+layout_mode = 2
+
+[node name="BotonEmpujar" type="Button" parent="UI/PanelControl/MarginContainer/VBoxContainer/HBoxBotones" unique_id=909445767]
+layout_mode = 2
+text = "Empujar
+"
+
+[node name="BotonReset" type="Button" parent="UI/PanelControl/MarginContainer/VBoxContainer/HBoxBotones" unique_id=334570899]
+layout_mode = 2
+text = "Reiniciar
+"

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <!-- Fondo blanco -->
+    <linearGradient id="appleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF5252" />
+      <stop offset="100%" stop-color="#C62828" />
+    </linearGradient>
+    <linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ECEFF1" />
+      <stop offset="50%" stop-color="#90A4AE" />
+      <stop offset="100%" stop-color="#455A64" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.25"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#0288D1"/>
+    </marker>
+    <marker id="arrowOpposite" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#E65100"/>
+    </marker>
+  </defs>
+
+  <!-- Fondo blanco -->
+  <rect width="128" height="128" rx="28" fill="#FFFFFF"/>
+  <rect width="124" height="124" x="2" y="2" rx="26" fill="none" stroke="#E0E0E0" stroke-width="2"/>
+
+  <!-- Guías de plano / Laboratorio sutiles -->
+  <line x1="16" y1="96" x2="112" y2="96" stroke="#CFD8DC" stroke-width="2" stroke-linecap="round"/>
+  <line x1="28" y1="96" x2="28" y2="102" stroke="#B0BEC5" stroke-width="1.5"/>
+  <line x1="48" y1="96" x2="48" y2="102" stroke="#B0BEC5" stroke-width="1.5"/>
+  <line x1="68" y1="96" x2="68" y2="102" stroke="#B0BEC5" stroke-width="1.5"/>
+  <line x1="88" y1="96" x2="88" y2="102" stroke="#B0BEC5" stroke-width="1.5"/>
+  <line x1="108" y1="96" x2="108" y2="102" stroke="#B0BEC5" stroke-width="1.5"/>
+
+  <!-- Órbita / Trayectoria curva punteada (Inercia) -->
+  <path d="M 24 75 Q 64 25 104 75" fill="none" stroke="#B0BEC5" stroke-width="2" stroke-dasharray="3,3"/>
+
+  <!-- Esfera de choque / Masa (Física / Péndulo de Newton) -->
+  <circle cx="44" cy="68" r="16" fill="url(#metalGrad)" filter="url(#shadow)"/>
+  <circle cx="40" cy="62" r="4" fill="#FFFFFF" opacity="0.6"/>
+
+  <!-- Manzana estilizada de Newton (Acción, Gravedad y Masa) -->
+  <g filter="url(#shadow)">
+    <!-- Tallo y hoja -->
+    <path d="M 84 54 C 84 48 88 44 91 42" fill="none" stroke="#5D4037" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 91 44 Q 97 43 96 48 Q 90 49 91 44 Z" fill="#43A047"/>
+    <!-- Cuerpo manzana -->
+    <path d="M 84 55 C 76 55 72 61 72 68 C 72 78 80 84 84 84 C 88 84 96 78 96 68 C 96 61 92 55 84 55 Z" fill="url(#appleGrad)"/>
+    <circle cx="80" cy="62" r="2.5" fill="#FFFFFF" opacity="0.5"/>
+  </g>
+
+  <!-- Vectores de fuerza: Acción y Reacción / Aceleración -->
+  <!-- Vector azul hacia la derecha -->
+  <line x1="48" y1="46" x2="74" y2="46" stroke="#0288D1" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <!-- Vector naranja opuesto -->
+  <line x1="44" y1="46" x2="22" y2="46" stroke="#E65100" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrowOpposite)"/>
+
+  <!-- Letra N / Símbolo de Newton centrado arriba -->
+  <text x="64" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="900" fill="#263238" text-anchor="middle" letter-spacing="1">N</text>
+</svg>
