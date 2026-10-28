@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://durnkfnan887u"]
+
+[ext_resource type="Script" uid="uid://cp10wmyc1e50q" path="res://juego.gd" id="1_gvuhb"]
+[ext_resource type="Script" uid="uid://c1tu3hf3u00yi" path="res://bola.gd" id="2_n74ki"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_54wfp"]
+radius = 16.0
+
+[node name="Juego" type="Node2D" unique_id=1082244969]
+script = ExtResource("1_gvuhb")
+
+[node name="Bola" type="RigidBody2D" parent="." unique_id=1810664933]
+position = Vector2(150, 300)
+gravity_scale = 0.0
+script = ExtResource("2_n74ki")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bola" unique_id=1623224068]
+shape = SubResource("CircleShape2D_54wfp")
