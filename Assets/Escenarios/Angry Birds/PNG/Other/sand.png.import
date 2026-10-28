@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://r37p2s7rnjw4"
-path="res://.godot/imported/sand.png-799b511769845af8130db28bd7a8b250.ctex"
+path="res://.godot/imported/sand.png-dfc1f315ec9c2c26439ce4b7bf4cb204.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Escenarios/PNG/Other/sand.png"
-dest_files=["res://.godot/imported/sand.png-799b511769845af8130db28bd7a8b250.ctex"]
+source_file="res://Assets/Escenarios/Angry Birds/PNG/Other/sand.png"
+dest_files=["res://.godot/imported/sand.png-dfc1f315ec9c2c26439ce4b7bf4cb204.ctex"]
 
 [params]
 

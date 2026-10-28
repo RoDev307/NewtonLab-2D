@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b2t5ws55v1v0u"]
+
+[ext_resource type="Texture2D" uid="uid://blwy2dq5m3jmv" path="res://Assets/MenuUI/Icon51.png" id="1_ido4f"]
+[ext_resource type="Script" uid="uid://de04b1plq2x3h" path="res://Escenas/BotonRegresar.gd" id="1_j8e4v"]
+[ext_resource type="Script" uid="uid://cr753dviq5ily" path="res://Scripts/BotonEscalar.gd" id="3_fo4vx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gdyll"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0qwxx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jmp4w"]
+
+[node name="UI_Navegacion" type="CanvasLayer" unique_id=1378265786]
+script = ExtResource("1_j8e4v")
+
+[node name="BotonRegresar" type="Button" parent="." unique_id=816716886]
+offset_right = 112.0
+offset_bottom = 98.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gdyll")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_0qwxx")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jmp4w")
+icon = ExtResource("1_ido4f")
+script = ExtResource("3_fo4vx")

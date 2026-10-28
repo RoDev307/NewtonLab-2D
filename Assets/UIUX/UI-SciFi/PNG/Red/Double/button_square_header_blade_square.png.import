@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://offlqegkiwte"
-path="res://.godot/imported/button_square_header_blade_square.png-95431afe8ab0a285cf5874c9933a2d0d.ctex"
+path="res://.godot/imported/button_square_header_blade_square.png-a65914bd3c10704568cbb3df048a24d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UIUX/PNG/Red/Double/button_square_header_blade_square.png"
-dest_files=["res://.godot/imported/button_square_header_blade_square.png-95431afe8ab0a285cf5874c9933a2d0d.ctex"]
+source_file="res://Assets/UIUX/UI-SciFi/PNG/Red/Double/button_square_header_blade_square.png"
+dest_files=["res://.godot/imported/button_square_header_blade_square.png-a65914bd3c10704568cbb3df048a24d4.ctex"]
 
 [params]
 

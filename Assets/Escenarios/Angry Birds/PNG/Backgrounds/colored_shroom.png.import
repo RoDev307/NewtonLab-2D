@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cf8oldclhuwr6"
-path="res://.godot/imported/colored_shroom.png-0574e3845fbcd5d97bdf2dc4e8acd48e.ctex"
+path="res://.godot/imported/colored_shroom.png-164a23ae172dc61d6cf4fe17be46f66e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Escenarios/PNG/Backgrounds/colored_shroom.png"
-dest_files=["res://.godot/imported/colored_shroom.png-0574e3845fbcd5d97bdf2dc4e8acd48e.ctex"]
+source_file="res://Assets/Escenarios/Angry Birds/PNG/Backgrounds/colored_shroom.png"
+dest_files=["res://.godot/imported/colored_shroom.png-164a23ae172dc61d6cf4fe17be46f66e.ctex"]
 
 [params]
 

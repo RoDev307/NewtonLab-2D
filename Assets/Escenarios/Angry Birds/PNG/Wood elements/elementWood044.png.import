@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dmbnn6kn4dmsx"
-path="res://.godot/imported/elementWood044.png-89233d98bc1ca1d024cf83123bb5d754.ctex"
+path="res://.godot/imported/elementWood044.png-50e099459472af6f23e581f923675cbd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Escenarios/PNG/Wood elements/elementWood044.png"
-dest_files=["res://.godot/imported/elementWood044.png-89233d98bc1ca1d024cf83123bb5d754.ctex"]
+source_file="res://Assets/Escenarios/Angry Birds/PNG/Wood elements/elementWood044.png"
+dest_files=["res://.godot/imported/elementWood044.png-50e099459472af6f23e581f923675cbd.ctex"]
 
 [params]
 

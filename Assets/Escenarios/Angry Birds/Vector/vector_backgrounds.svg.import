@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cpxvb5jx2s218"
-path="res://.godot/imported/vector_backgrounds.svg-d3f9666be8dab88a0e7ad764b6df5bd2.ctex"
+path="res://.godot/imported/vector_backgrounds.svg-d263ee2cc3b6336cd701d9fe0ce39a47.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Escenarios/Vector/vector_backgrounds.svg"
-dest_files=["res://.godot/imported/vector_backgrounds.svg-d3f9666be8dab88a0e7ad764b6df5bd2.ctex"]
+source_file="res://Assets/Escenarios/Angry Birds/Vector/vector_backgrounds.svg"
+dest_files=["res://.godot/imported/vector_backgrounds.svg-d263ee2cc3b6336cd701d9fe0ce39a47.ctex"]
 
 [params]
 

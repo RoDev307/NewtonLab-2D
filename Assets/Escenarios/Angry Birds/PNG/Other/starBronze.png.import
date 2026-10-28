@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://byemse275txhj"
-path="res://.godot/imported/starBronze.png-32eb3448b913484ad62c64a9608a6ae9.ctex"
+path="res://.godot/imported/starBronze.png-716b79d8c7fa005d047c7d63530195ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Escenarios/PNG/Other/starBronze.png"
-dest_files=["res://.godot/imported/starBronze.png-32eb3448b913484ad62c64a9608a6ae9.ctex"]
+source_file="res://Assets/Escenarios/Angry Birds/PNG/Other/starBronze.png"
+dest_files=["res://.godot/imported/starBronze.png-716b79d8c7fa005d047c7d63530195ca.ctex"]
 
 [params]
 

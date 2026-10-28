@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dynoknttphdpx"
-path="res://.godot/imported/button_rectangle_depth.png-eb0da5a9d74322f76f7fe6aaa3599275.ctex"
+path="res://.godot/imported/button_rectangle_depth.png-c40efa0a1509dca80f96b27dc908cd7d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UIUX/PNG/Extra/Default/button_rectangle_depth.png"
-dest_files=["res://.godot/imported/button_rectangle_depth.png-eb0da5a9d74322f76f7fe6aaa3599275.ctex"]
+source_file="res://Assets/UIUX/UI-SciFi/PNG/Extra/Default/button_rectangle_depth.png"
+dest_files=["res://.godot/imported/button_rectangle_depth.png-c40efa0a1509dca80f96b27dc908cd7d.ctex"]
 
 [params]
 

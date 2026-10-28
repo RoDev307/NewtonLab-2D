@@ -1,3 +1,7 @@
 [gd_scene format=3 uid="uid://ynaubsn0l1va"]
 
+[ext_resource type="PackedScene" uid="uid://b2t5ws55v1v0u" path="res://Escenas/BotonRegresar.tscn" id="1_b37no"]
+
 [node name="Minijuego1Inercia" type="Node2D" unique_id=1434605762]
+
+[node name="UI_Navegacion" parent="." unique_id=1378265786 instance=ExtResource("1_b37no")]

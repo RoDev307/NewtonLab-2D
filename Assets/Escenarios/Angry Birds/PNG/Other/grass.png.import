@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://qema4ymyu2qd"
-path="res://.godot/imported/grass.png-123b0398fe52dffa012e32190eab229f.ctex"
+path="res://.godot/imported/grass.png-247f4cfef96cb99d208bdf2b64f341ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Escenarios/PNG/Other/grass.png"
-dest_files=["res://.godot/imported/grass.png-123b0398fe52dffa012e32190eab229f.ctex"]
+source_file="res://Assets/Escenarios/Angry Birds/PNG/Other/grass.png"
+dest_files=["res://.godot/imported/grass.png-247f4cfef96cb99d208bdf2b64f341ee.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ymh340nratha"
-path="res://.godot/imported/cursor_h.svg-d8a2b3ada5378738fc2f883f8101837f.ctex"
+path="res://.godot/imported/cursor_h.svg-72d1df4ef27e4293b0a83ea2c9301133.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UIUX/Vector/Extra/cursor_h.svg"
-dest_files=["res://.godot/imported/cursor_h.svg-d8a2b3ada5378738fc2f883f8101837f.ctex"]
+source_file="res://Assets/UIUX/UI-SciFi/Vector/Extra/cursor_h.svg"
+dest_files=["res://.godot/imported/cursor_h.svg-72d1df4ef27e4293b0a83ea2c9301133.ctex"]
 
 [params]
 

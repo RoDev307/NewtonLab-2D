@@ -1,3 +1,110 @@
 [gd_scene format=3 uid="uid://b37xmhtjwe6s2"]
 
-[node name="MenuPrincipal" type="Node2D" unique_id=621486143]
+[ext_resource type="Script" uid="uid://b1nvh0s3hme2l" path="res://Escenas/MenuPrincipal.gd" id="1_iq5l4"]
+[ext_resource type="Theme" uid="uid://biykhdveyk8io" path="res://Assets/UIUX/TemaPrincipal.tres" id="1_shwl5"]
+[ext_resource type="Texture2D" uid="uid://bqtsihvwdvk1b" path="res://Assets/UIUX/NewtonLabLogo.png" id="2_shwl5"]
+[ext_resource type="Texture2D" uid="uid://cflmnafv7pfm7" path="res://Assets/BG/Skyboxes/Skyboxes/skybox-space-nebula.png" id="3_0qwxx"]
+[ext_resource type="Texture2D" uid="uid://b1t5cy7djle41" path="res://Assets/MenuUI/Icon35.png" id="5_gdyll"]
+[ext_resource type="Script" uid="uid://cr753dviq5ily" path="res://Scripts/BotonEscalar.gd" id="6_0qwxx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j8e4v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fo4vx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gdyll"]
+
+[node name="MenuPrincipal" type="Control" unique_id=910888633]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(150, 24)
+theme = ExtResource("1_shwl5")
+script = ExtResource("1_iq5l4")
+
+[node name="Fondo" type="TextureRect" parent="." unique_id=1529032731]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_0qwxx")
+expand_mode = 2
+
+[node name="Titulo" type="TextureRect" parent="." unique_id=119500863]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -375.0
+offset_right = 375.0
+offset_bottom = 350.0
+grow_horizontal = 2
+texture = ExtResource("2_shwl5")
+expand_mode = 1
+
+[node name="BotonCerrar" type="Button" parent="." unique_id=275254044]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -26.0
+offset_bottom = 26.0
+grow_horizontal = 0
+offset_transform_position = Vector2(-10, 15)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_j8e4v")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_fo4vx")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_gdyll")
+icon = ExtResource("5_gdyll")
+icon_alignment = 1
+script = ExtResource("6_0qwxx")
+
+[node name="CentroContenedor" type="CenterContainer" parent="." unique_id=1099020289]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.372
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 43.944
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BotonesContainer" type="VBoxContainer" parent="CentroContenedor" unique_id=1658971096]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="BotonLey1" type="Button" parent="CentroContenedor/BotonesContainer" unique_id=625313670]
+custom_minimum_size = Vector2(260, 48)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+text = "1.ª Ley: Ley de Inercia"
+script = ExtResource("6_0qwxx")
+
+[node name="BotonLey2" type="Button" parent="CentroContenedor/BotonesContainer" unique_id=1131779003]
+custom_minimum_size = Vector2(260, 48)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+text = "2.ª Ley: Fuerza y Aceleración"
+script = ExtResource("6_0qwxx")
+
+[node name="BotonLey3" type="Button" parent="CentroContenedor/BotonesContainer" unique_id=286756404]
+custom_minimum_size = Vector2(260, 48)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+text = "3.ª Ley: Acción y Reacción"
+script = ExtResource("6_0qwxx")
+
+[node name="BotonBillar" type="Button" parent="CentroContenedor/BotonesContainer" unique_id=1797910816]
+custom_minimum_size = Vector2(300, 48)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+text = "Mesa de Billar (Modo Completo)"
+script = ExtResource("6_0qwxx")

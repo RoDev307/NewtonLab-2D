@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7udbr3d7n3qy"
-path="res://.godot/imported/button_square_header_large_rectangle_screws.png-6ca51eb5a2380f66908204bee5a7579a.ctex"
+path="res://.godot/imported/button_square_header_large_rectangle_screws.png-5da98d3dfc2cdf59a198c115e29ba1c5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UIUX/PNG/Blue/Default/button_square_header_large_rectangle_screws.png"
-dest_files=["res://.godot/imported/button_square_header_large_rectangle_screws.png-6ca51eb5a2380f66908204bee5a7579a.ctex"]
+source_file="res://Assets/UIUX/UI-SciFi/PNG/Blue/Default/button_square_header_large_rectangle_screws.png"
+dest_files=["res://.godot/imported/button_square_header_large_rectangle_screws.png-5da98d3dfc2cdf59a198c115e29ba1c5.ctex"]
 
 [params]
 

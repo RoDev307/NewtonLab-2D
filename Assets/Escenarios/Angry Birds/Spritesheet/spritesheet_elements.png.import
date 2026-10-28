@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cee2rasypvkmv"
-path="res://.godot/imported/spritesheet_elements.png-1edb663459a583268a121e0d63d5cae7.ctex"
+path="res://.godot/imported/spritesheet_elements.png-23396d28e8f02e89e1abe12dcf074ff1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Escenarios/Spritesheet/spritesheet_elements.png"
-dest_files=["res://.godot/imported/spritesheet_elements.png-1edb663459a583268a121e0d63d5cae7.ctex"]
+source_file="res://Assets/Escenarios/Angry Birds/Spritesheet/spritesheet_elements.png"
+dest_files=["res://.godot/imported/spritesheet_elements.png-23396d28e8f02e89e1abe12dcf074ff1.ctex"]
 
 [params]
 

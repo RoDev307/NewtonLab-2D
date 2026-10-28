@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b051tcgiuxuid"
-path="res://.godot/imported/elementGlass013.png-8793b93c5d321ce180708d1297329a73.ctex"
+path="res://.godot/imported/elementGlass013.png-b1715e10df92e91cfe4f738503f1e0fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Escenarios/PNG/Glass elements/elementGlass013.png"
-dest_files=["res://.godot/imported/elementGlass013.png-8793b93c5d321ce180708d1297329a73.ctex"]
+source_file="res://Assets/Escenarios/Angry Birds/PNG/Glass elements/elementGlass013.png"
+dest_files=["res://.godot/imported/elementGlass013.png-b1715e10df92e91cfe4f738503f1e0fa.ctex"]
 
 [params]
 

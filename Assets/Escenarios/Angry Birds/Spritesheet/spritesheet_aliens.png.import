@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cfipikm52oh7g"
-path="res://.godot/imported/spritesheet_aliens.png-af66e6c70bd7a0c820a7b46c944a2ee5.ctex"
+path="res://.godot/imported/spritesheet_aliens.png-cefdc9e0e41d0a280f869efb95575ebb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Escenarios/Spritesheet/spritesheet_aliens.png"
-dest_files=["res://.godot/imported/spritesheet_aliens.png-af66e6c70bd7a0c820a7b46c944a2ee5.ctex"]
+source_file="res://Assets/Escenarios/Angry Birds/Spritesheet/spritesheet_aliens.png"
+dest_files=["res://.godot/imported/spritesheet_aliens.png-cefdc9e0e41d0a280f869efb95575ebb.ctex"]
 
 [params]
 

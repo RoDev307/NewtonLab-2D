@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ccipmmcfv0pgh"
-path="res://.godot/imported/snow.png-19ea86d2b27c31d1d56d90c02fc6ab91.ctex"
+path="res://.godot/imported/snow.png-39eb371a7f7ef24c44e9858725a6aa82.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Escenarios/PNG/Other/snow.png"
-dest_files=["res://.godot/imported/snow.png-19ea86d2b27c31d1d56d90c02fc6ab91.ctex"]
+source_file="res://Assets/Escenarios/Angry Birds/PNG/Other/snow.png"
+dest_files=["res://.godot/imported/snow.png-39eb371a7f7ef24c44e9858725a6aa82.ctex"]
 
 [params]
 

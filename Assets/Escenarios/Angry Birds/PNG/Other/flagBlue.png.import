@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bnr2q75b4u6tl"
-path="res://.godot/imported/flagBlue.png-7082acbe4101acf54812969939b89438.ctex"
+path="res://.godot/imported/flagBlue.png-d89b701eb30cbc15afe0940aa4311be9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Escenarios/PNG/Other/flagBlue.png"
-dest_files=["res://.godot/imported/flagBlue.png-7082acbe4101acf54812969939b89438.ctex"]
+source_file="res://Assets/Escenarios/Angry Birds/PNG/Other/flagBlue.png"
+dest_files=["res://.godot/imported/flagBlue.png-d89b701eb30cbc15afe0940aa4311be9.ctex"]
 
 [params]
 

@@ -1,0 +1,21 @@
+[gd_resource type="Theme" format=3 uid="uid://biykhdveyk8io"]
+
+[ext_resource type="Texture2D" uid="uid://ebrik2iewe5" path="res://Assets/MenuUI/Button11.png" id="1_yieps"]
+
+[sub_resource type="SystemFont" id="SystemFont_jmp4w"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0qwxx"]
+texture = ExtResource("1_yieps")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_18qdi"]
+texture = ExtResource("1_yieps")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tl2c1"]
+texture = ExtResource("1_yieps")
+
+[resource]
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/fonts/font = SubResource("SystemFont_jmp4w")
+Button/styles/hover = SubResource("StyleBoxTexture_0qwxx")
+Button/styles/normal = SubResource("StyleBoxTexture_18qdi")
+Button/styles/pressed = SubResource("StyleBoxTexture_tl2c1")

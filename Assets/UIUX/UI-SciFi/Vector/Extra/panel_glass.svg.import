@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://guyn8e7v458y"
-path="res://.godot/imported/panel_glass.svg-e126d3ef30316c801e14693be3a76a4d.ctex"
+path="res://.godot/imported/panel_glass.svg-1915ec8ef57ae7664e30715bc6a00d71.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UIUX/Vector/Extra/panel_glass.svg"
-dest_files=["res://.godot/imported/panel_glass.svg-e126d3ef30316c801e14693be3a76a4d.ctex"]
+source_file="res://Assets/UIUX/UI-SciFi/Vector/Extra/panel_glass.svg"
+dest_files=["res://.godot/imported/panel_glass.svg-1915ec8ef57ae7664e30715bc6a00d71.ctex"]
 
 [params]
 

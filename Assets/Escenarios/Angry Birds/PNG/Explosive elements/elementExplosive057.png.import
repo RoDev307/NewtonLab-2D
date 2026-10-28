@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bi4ei6iqwsbuo"
-path="res://.godot/imported/elementExplosive057.png-b1fe0bf0532b72ee48a8081d7739038c.ctex"
+path="res://.godot/imported/elementExplosive057.png-2de3d0b6beeb8754d4109c12ff7f0034.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Escenarios/PNG/Explosive elements/elementExplosive057.png"
-dest_files=["res://.godot/imported/elementExplosive057.png-b1fe0bf0532b72ee48a8081d7739038c.ctex"]
+source_file="res://Assets/Escenarios/Angry Birds/PNG/Explosive elements/elementExplosive057.png"
+dest_files=["res://.godot/imported/elementExplosive057.png-2de3d0b6beeb8754d4109c12ff7f0034.ctex"]
 
 [params]
 

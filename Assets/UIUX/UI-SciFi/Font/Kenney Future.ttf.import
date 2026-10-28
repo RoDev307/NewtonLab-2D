@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dr22mag15sale"
-path="res://.godot/imported/Kenney Future.ttf-fb1769ede8c3fd5a9bf1cd4d0ed661ca.fontdata"
+path="res://.godot/imported/Kenney Future.ttf-70b27896afb816205af3deb7188cc67f.fontdata"
 
 [deps]
 
-source_file="res://Assets/UIUX/Font/Kenney Future.ttf"
-dest_files=["res://.godot/imported/Kenney Future.ttf-fb1769ede8c3fd5a9bf1cd4d0ed661ca.fontdata"]
+source_file="res://Assets/UIUX/UI-SciFi/Font/Kenney Future.ttf"
+dest_files=["res://.godot/imported/Kenney Future.ttf-70b27896afb816205af3deb7188cc67f.fontdata"]
 
 [params]
 

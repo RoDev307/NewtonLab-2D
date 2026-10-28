@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4k02hd7030ly"
-path="res://.godot/imported/alienBlue_suit.png-34114bd3577e45ced4fe1d9033df02af.ctex"
+path="res://.godot/imported/alienBlue_suit.png-fed86e22e07ae0897d572e5712d75dc6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Escenarios/PNG/Aliens/alienBlue_suit.png"
-dest_files=["res://.godot/imported/alienBlue_suit.png-34114bd3577e45ced4fe1d9033df02af.ctex"]
+source_file="res://Assets/Escenarios/Angry Birds/PNG/Aliens/alienBlue_suit.png"
+dest_files=["res://.godot/imported/alienBlue_suit.png-fed86e22e07ae0897d572e5712d75dc6.ctex"]
 
 [params]
 

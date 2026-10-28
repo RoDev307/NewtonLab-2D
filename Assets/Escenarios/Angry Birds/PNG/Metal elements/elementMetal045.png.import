@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5v030trn27bs"
-path="res://.godot/imported/elementMetal045.png-702b961f6d0f916d20c7d8abd7ee103e.ctex"
+path="res://.godot/imported/elementMetal045.png-0fea329a0bd1bf24bf843f793c72f3d5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Escenarios/PNG/Metal elements/elementMetal045.png"
-dest_files=["res://.godot/imported/elementMetal045.png-702b961f6d0f916d20c7d8abd7ee103e.ctex"]
+source_file="res://Assets/Escenarios/Angry Birds/PNG/Metal elements/elementMetal045.png"
+dest_files=["res://.godot/imported/elementMetal045.png-0fea329a0bd1bf24bf843f793c72f3d5.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://f17txxufwd17"
-path="res://.godot/imported/dirt.png-e609a17b1c7858334c6a4b5f0b335afc.ctex"
+path="res://.godot/imported/dirt.png-1a3f120e3f474e67bf79b416c3ef58a2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Escenarios/PNG/Other/dirt.png"
-dest_files=["res://.godot/imported/dirt.png-e609a17b1c7858334c6a4b5f0b335afc.ctex"]
+source_file="res://Assets/Escenarios/Angry Birds/PNG/Other/dirt.png"
+dest_files=["res://.godot/imported/dirt.png-1a3f120e3f474e67bf79b416c3ef58a2.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bqwed6spd5qn0"
-path="res://.godot/imported/elementStone039.png-856dd8e9552d0b6d7c4882ee37349836.ctex"
+path="res://.godot/imported/elementStone039.png-634d67e1ccc646accf410f29b8ef7c6d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Escenarios/PNG/Stone elements/elementStone039.png"
-dest_files=["res://.godot/imported/elementStone039.png-856dd8e9552d0b6d7c4882ee37349836.ctex"]
+source_file="res://Assets/Escenarios/Angry Birds/PNG/Stone elements/elementStone039.png"
+dest_files=["res://.godot/imported/elementStone039.png-634d67e1ccc646accf410f29b8ef7c6d.ctex"]
 
 [params]
 

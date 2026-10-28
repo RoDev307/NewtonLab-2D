@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dgc6fa566hmce"
-path="res://.godot/imported/panel_square.png-73fb07a80c492a50bc63e6073a9f97a5.ctex"
+path="res://.godot/imported/panel_square.png-6d620aebd0edc15999ef182c4752abc4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UIUX/PNG/Extra/Default/panel_square.png"
-dest_files=["res://.godot/imported/panel_square.png-73fb07a80c492a50bc63e6073a9f97a5.ctex"]
+source_file="res://Assets/UIUX/UI-SciFi/PNG/Extra/Default/panel_square.png"
+dest_files=["res://.godot/imported/panel_square.png-6d620aebd0edc15999ef182c4752abc4.ctex"]
 
 [params]
 

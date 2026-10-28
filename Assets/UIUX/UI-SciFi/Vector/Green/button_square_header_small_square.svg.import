@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bywret7g3ri63"
-path="res://.godot/imported/button_square_header_small_square.svg-ba1fc4931a00a6d497673914ab7f37fa.ctex"
+path="res://.godot/imported/button_square_header_small_square.svg-52d01a3b874f3f2dc8a181d00a74647a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UIUX/Vector/Green/button_square_header_small_square.svg"
-dest_files=["res://.godot/imported/button_square_header_small_square.svg-ba1fc4931a00a6d497673914ab7f37fa.ctex"]
+source_file="res://Assets/UIUX/UI-SciFi/Vector/Green/button_square_header_small_square.svg"
+dest_files=["res://.godot/imported/button_square_header_small_square.svg-52d01a3b874f3f2dc8a181d00a74647a.ctex"]
 
 [params]
 

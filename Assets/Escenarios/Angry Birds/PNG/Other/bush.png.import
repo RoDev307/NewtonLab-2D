@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dwgwxlexeekn8"
-path="res://.godot/imported/bush.png-4a0d594cb724823fad7c9f7abb5bcd09.ctex"
+path="res://.godot/imported/bush.png-7055f4b1c83a584c3006ad12ba669976.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Escenarios/PNG/Other/bush.png"
-dest_files=["res://.godot/imported/bush.png-4a0d594cb724823fad7c9f7abb5bcd09.ctex"]
+source_file="res://Assets/Escenarios/Angry Birds/PNG/Other/bush.png"
+dest_files=["res://.godot/imported/bush.png-7055f4b1c83a584c3006ad12ba669976.ctex"]
 
 [params]
 

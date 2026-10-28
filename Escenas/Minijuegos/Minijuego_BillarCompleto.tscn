@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dq8qo7slnw6di"]
+
+[ext_resource type="PackedScene" uid="uid://b2t5ws55v1v0u" path="res://Escenas/BotonRegresar.tscn" id="1_052cn"]
+
+[node name="3Leyes" type="Node2D" unique_id=52792979]
+
+[node name="UI_Navegacion" parent="." unique_id=1378265786 instance=ExtResource("1_052cn")]

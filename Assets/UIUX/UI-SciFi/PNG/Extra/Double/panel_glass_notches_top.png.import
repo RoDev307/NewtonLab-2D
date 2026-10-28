@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dujmyeqs3cx75"
-path="res://.godot/imported/panel_glass_notches_top.png-cce8faad0794a16ccfd9cef02640c56d.ctex"
+path="res://.godot/imported/panel_glass_notches_top.png-a49da228dabd7790c67b8b5697f8cb29.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UIUX/PNG/Extra/Double/panel_glass_notches_top.png"
-dest_files=["res://.godot/imported/panel_glass_notches_top.png-cce8faad0794a16ccfd9cef02640c56d.ctex"]
+source_file="res://Assets/UIUX/UI-SciFi/PNG/Extra/Double/panel_glass_notches_top.png"
+dest_files=["res://.godot/imported/panel_glass_notches_top.png-a49da228dabd7790c67b8b5697f8cb29.ctex"]
 
 [params]
 

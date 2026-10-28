@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://kl46hi0leo01"
-path="res://.godot/imported/bar_round_gloss_small_l.png-fbbfa242c15ff505015adb19389d4df2.ctex"
+path="res://.godot/imported/bar_round_gloss_small_l.png-28c831c988e31cecce485f634f7d5ca0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UIUX/PNG/Blue/Default/bar_round_gloss_small_l.png"
-dest_files=["res://.godot/imported/bar_round_gloss_small_l.png-fbbfa242c15ff505015adb19389d4df2.ctex"]
+source_file="res://Assets/UIUX/UI-SciFi/PNG/Blue/Default/bar_round_gloss_small_l.png"
+dest_files=["res://.godot/imported/bar_round_gloss_small_l.png-28c831c988e31cecce485f634f7d5ca0.ctex"]
 
 [params]
 

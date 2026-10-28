@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dg54svwn8q6kb"
-path="res://.godot/imported/colored_desert.png-92419e6cd6881de7148ce9179825237d.ctex"
+path="res://.godot/imported/colored_desert.png-91e592d3bfb0450ab52cfc13dc207919.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Escenarios/PNG/Backgrounds/colored_desert.png"
-dest_files=["res://.godot/imported/colored_desert.png-92419e6cd6881de7148ce9179825237d.ctex"]
+source_file="res://Assets/Escenarios/Angry Birds/PNG/Backgrounds/colored_desert.png"
+dest_files=["res://.godot/imported/colored_desert.png-91e592d3bfb0450ab52cfc13dc207919.ctex"]
 
 [params]
 

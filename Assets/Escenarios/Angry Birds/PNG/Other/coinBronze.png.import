@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://duigy80eysg02"
-path="res://.godot/imported/coinBronze.png-02e97d46b3d8963e0269e8224d51eac0.ctex"
+path="res://.godot/imported/coinBronze.png-5c3927a9a5617af896a34dc5198edae1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Escenarios/PNG/Other/coinBronze.png"
-dest_files=["res://.godot/imported/coinBronze.png-02e97d46b3d8963e0269e8224d51eac0.ctex"]
+source_file="res://Assets/Escenarios/Angry Birds/PNG/Other/coinBronze.png"
+dest_files=["res://.godot/imported/coinBronze.png-5c3927a9a5617af896a34dc5198edae1.ctex"]
 
 [params]
 
