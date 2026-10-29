@@ -9,6 +9,7 @@ func _ready() -> void:
 	boton_regresar.pressed.connect(_on_boton_regresar_pressed)
 
 func _on_boton_regresar_pressed() -> void:
+	get_tree().paused = false
 	if ResourceLoader.exists(RUTA_MENU_PRINCIPAL):
 		get_tree().change_scene_to_file(RUTA_MENU_PRINCIPAL)
 	else:

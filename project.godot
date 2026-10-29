@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="NewtonLab-2D"
-run/main_scene="uid://b2k7k7u1t7is6"
+run/main_scene="uid://b37xmhtjwe6s2"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 

@@ -125,7 +125,7 @@ func _process(delta: float) -> void:
 		)
 
 		mostrar_resultado(
-			distancia <= RADIO_DIANA - bola.RADIO,
+			distancia <= RADIO_DIANA,
 			false
 		)
 
@@ -452,15 +452,16 @@ void fragment() {
 	tarjeta.add_theme_stylebox_override("panel", estilo_panel)
 	modal.add_child(tarjeta)
 
-	var ancho_cinta: float = minf(tamano.x - 50.0, 680.0)
+	var ancho_cinta: float = minf(tamano.x + 60.0, 760.0)
 
 	var cinta := TextureRect.new()
-	cinta.texture = textura_cinta()
+	cinta.texture = textura_cinta(ancho_cinta)
 	cinta.position = Vector2(
 		(tamano.x - ancho_cinta) / 2.0,
 		-34
 	)
 	cinta.size = Vector2(ancho_cinta, 92)
+	cinta.custom_minimum_size = Vector2(ancho_cinta, 92)
 	cinta.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	cinta.stretch_mode = TextureRect.STRETCH_SCALE
 	cinta.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -471,22 +472,24 @@ void fragment() {
 	if titulo.length() > 23:
 		tamano_titulo = 27
 
-	var titulo_etiqueta := etiqueta(
-		cinta,
-		titulo,
-		Vector2(28, 12),
-		Vector2(ancho_cinta - 56.0, 54),
-		tamano_titulo,
-		BLANCO
-	)
-
+	var titulo_etiqueta := Label.new()
+	titulo_etiqueta.position = Vector2(0, 5)
+	titulo_etiqueta.size = Vector2(ancho_cinta, 64)
+	titulo_etiqueta.custom_minimum_size = Vector2(ancho_cinta, 64)
+	titulo_etiqueta.text = titulo
+	titulo_etiqueta.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	titulo_etiqueta.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	titulo_etiqueta.autowrap_mode = TextServer.AUTOWRAP_OFF
+	titulo_etiqueta.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	titulo_etiqueta.add_theme_font_override("font", fuente)
+	titulo_etiqueta.add_theme_font_size_override("font_size", tamano_titulo)
+	titulo_etiqueta.add_theme_color_override("font_color", BLANCO)
 	titulo_etiqueta.add_theme_color_override(
 		"font_outline_color",
 		Color("#5A2C00")
 	)
 	titulo_etiqueta.add_theme_constant_override("outline_size", 5)
+	cinta.add_child(titulo_etiqueta)
 
 	tarjeta.scale = Vector2(0.90, 0.90)
 	tarjeta.modulate.a = 0.0
@@ -518,7 +521,7 @@ func mostrar_menu() -> void:
 	bola.hide()
 	controles.hide()
 
-	preparar_ventana("NEWTONLAB 2D")
+	preparar_ventana("NEWTONLAB 2D", Vector2(580, 390))
 
 	etiqueta(
 		tarjeta,
@@ -542,23 +545,11 @@ func mostrar_menu() -> void:
 		tarjeta,
 		"Cómo jugar",
 		Vector2(45, 290),
-		Vector2(235, 48),
+		Vector2(490, 52),
 		mostrar_ayuda,
 		Color("#BEEBFF"),
 		22
 	)
-
-	boton(
-		tarjeta,
-		"Salir",
-		Vector2(300, 290),
-		Vector2(235, 48),
-		salir,
-		Color("#FFB8CF"),
-		22
-	)
-
-	agregar_volumen(395)
 
 
 func mostrar_ayuda() -> void:
@@ -627,7 +618,7 @@ func mostrar_pausa() -> void:
 	pantalla = "pausa"
 	get_tree().paused = true
 
-	preparar_ventana("PAUSA")
+	preparar_ventana("PAUSA", Vector2(580, 340))
 
 	boton(
 		tarjeta,
@@ -648,8 +639,6 @@ func mostrar_pausa() -> void:
 		Color("#D1B3F5"),
 		24
 	)
-
-	agregar_volumen(365)
 
 
 func continuar() -> void:
@@ -872,44 +861,45 @@ func mostrar_resultado(gano: bool, fuera: bool) -> void:
 	# Sin texto de escala, distancia ni fórmulas de fuerza/freno.
 
 	if vidas > 0:
-		boton(
-			tarjeta,
-			"Intentar de nuevo",
-			Vector2(40, 580),
-			Vector2(440, 48),
-			nuevo_intento,
-			AMARILLO,
-			24
-		)
-
-		boton(
-			tarjeta,
-			"Menú principal",
-			Vector2(520, 580),
-			Vector2(440, 48),
-			mostrar_menu,
-			TURQUESA,
-			24
-		)
+		if gano:
+			boton(
+				tarjeta,
+				"Continuar",
+				Vector2(260, 580),
+				Vector2(480, 50),
+				nuevo_intento,
+				TURQUESA,
+				24
+			)
+		else:
+			boton(
+				tarjeta,
+				"Intentar de nuevo",
+				Vector2(260, 580),
+				Vector2(480, 50),
+				nuevo_intento,
+				AMARILLO,
+				24
+			)
 	else:
 		reinicio_restante = 5.0
 
 		cuenta_texto = etiqueta(
 			tarjeta,
 			"Nueva partida en 5...",
-			Vector2(40, 585),
-			Vector2(440, 35),
-			23,
+			Vector2(20, 588),
+			Vector2(240, 35),
+			18,
 			AMARILLO
 		)
 
 		boton(
 			tarjeta,
-			"Menú principal",
-			Vector2(520, 580),
-			Vector2(440, 48),
-			mostrar_menu,
-			TURQUESA,
+			"Nueva partida",
+			Vector2(260, 580),
+			Vector2(480, 50),
+			iniciar_partida,
+			AMARILLO,
 			24
 		)
 
@@ -1157,7 +1147,11 @@ func info_velocidad() -> void:
 
 
 func salir() -> void:
-	get_tree().quit()
+	get_tree().paused = false
+	if ResourceLoader.exists("res://Escenas/MenuPrincipal.tscn"):
+		get_tree().change_scene_to_file("res://Escenas/MenuPrincipal.tscn")
+	else:
+		get_tree().quit()
 
 
 # ==================================================
@@ -1254,19 +1248,7 @@ func dibujar_encabezado() -> void:
 			Color(1, 1, 1, 0.2)
 		)
 
-	letras("NEWTONLAB", Vector2(28, 65), 34)
 
-	draw_set_transform(Vector2(280, 48), -0.12)
-
-	draw_style_box(
-		estilo(AMARILLO, TINTA, 10, 4),
-		Rect2(-29, -23, 58, 43)
-	)
-
-	letras("2D", Vector2(-18, 9), 25, TINTA, false)
-	draw_set_transform(Vector2.ZERO)
-
-	letras("VIDAS", Vector2(827, 61), 20)
 
 
 func dibujar_pista() -> void:
@@ -1525,17 +1507,9 @@ func dibujar_potencia() -> void:
 
 	letras(
 		"APUNTA Y SUELTA",
-		Vector2(845, 684),
+		Vector2(845, 700),
 		22,
 		AMARILLO
-	)
-
-	letras(
-		"¡Cada golpe cuenta!",
-		Vector2(855, 716),
-		17,
-		BLANCO,
-		false
 	)
 
 
@@ -1775,10 +1749,17 @@ func textura_ventana(tamano: Vector2) -> Texture2D:
 	return textura_svg(codigo)
 
 
-func textura_cinta() -> Texture2D:
-	return textura_svg("""
-<svg xmlns="http://www.w3.org/2000/svg"
-	width="600" height="92">
+func textura_cinta(ancho: float = 640.0) -> Texture2D:
+	var w: float = maxf(ancho, 200.0)
+	var rf_x0: float = w - 72.0
+	var rf_x1: float = w - 12.0
+	var rf_notch: float = w - 27.0
+	var rect_x: float = 36.0
+	var rect_w: float = w - 72.0
+	var hl_x1: float = w - 55.0
+
+	var codigo: String = """<svg xmlns="http://www.w3.org/2000/svg"
+	width="%.0f" height="92" viewBox="0 0 %.0f 92">
 	<defs>
 		<linearGradient id="oro" x1="0" y1="0" x2="0" y2="1">
 			<stop offset="0" stop-color="#FFE566"/>
@@ -1787,24 +1768,31 @@ func textura_cinta() -> Texture2D:
 		</linearGradient>
 	</defs>
 
-	<path d="M15 22 H75 V78 H15 L30 50Z"
+	<path d="M12 22 H72 V78 H12 L27 50Z"
 		fill="#AD650E" stroke="#1A0E3B" stroke-width="4"/>
 
-	<path d="M525 22 H585 L570 50 L585 78 H525Z"
+	<path d="M%.1f 22 H%.1f L%.1f 50 L%.1f 78 H%.1fZ"
 		fill="#AD650E" stroke="#1A0E3B" stroke-width="4"/>
 
-	<rect x="40" y="17" width="520" height="63"
+	<rect x="%.1f" y="17" width="%.1f" height="63"
 		rx="16" fill="#0B0320"/>
 
-	<rect x="40" y="6" width="520" height="63"
+	<rect x="%.1f" y="6" width="%.1f" height="63"
 		rx="16" fill="url(#oro)"
 		stroke="#1A0E3B" stroke-width="4"/>
 
-	<path d="M59 13 H541"
+	<path d="M55 13 H%.1f"
 		stroke="#FFF7BC" stroke-width="3"
 		stroke-linecap="round"/>
-</svg>
-""")
+</svg>""" % [
+		w, w,
+		rf_x0, rf_x1, rf_notch, rf_x1, rf_x0,
+		rect_x, rect_w,
+		rect_x, rect_w,
+		hl_x1
+	]
+
+	return textura_svg(codigo)
 
 
 func textura_simbolo(tipo: String, lleno: bool) -> Texture2D:
@@ -1921,36 +1909,12 @@ func poner_simbolo(
 # ==================================================
 
 func crear_audio() -> void:
+	# Audio temporalmente desactivado para este nivel
 	musica = AudioStreamPlayer.new()
 	add_child(musica)
 
 	efectos = AudioStreamPlayer.new()
 	add_child(efectos)
-
-	musica.stream = secuencia(
-		[
-			261.63, 329.63, 392.0, 329.63,
-			293.66, 349.23, 440.0, 349.23,
-			329.63, 392.0, 523.25, 392.0,
-			293.66, 349.23, 392.0, 293.66
-		],
-		0.24,
-		true
-	)
-
-	golpe_audio = secuencia([170.0, 85.0], 0.045)
-	victoria_audio = secuencia(
-		[523.25, 659.25, 783.99, 1046.5],
-		0.16
-	)
-	derrota_audio = secuencia(
-		[392.0, 329.63, 261.63],
-		0.15
-	)
-
-	cambiar_musica(volumen_musica)
-	cambiar_efectos(volumen_efectos)
-	musica.play()
 
 
 func secuencia(
@@ -2007,6 +1971,8 @@ func secuencia(
 
 
 func reproducir(audio: AudioStreamWAV) -> void:
+	if efectos == null or audio == null:
+		return
 	efectos.stream = audio
 	efectos.play()
 

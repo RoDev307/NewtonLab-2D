@@ -11,6 +11,8 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jmp4w"]
 
 [node name="UI_Navegacion" type="CanvasLayer" unique_id=1378265786]
+process_mode = 3
+layer = 25
 script = ExtResource("1_j8e4v")
 
 [node name="BotonRegresar" type="Button" parent="." unique_id=816716886]

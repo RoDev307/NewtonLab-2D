@@ -75,10 +75,10 @@ grow_vertical = 2
 
 [node name="BotonesContainer" type="VBoxContainer" parent="CentroContenedor" unique_id=1658971096]
 layout_mode = 2
-theme_override_constants/separation = 16
+theme_override_constants/separation = 10
 
 [node name="BotonLey1" type="Button" parent="CentroContenedor/BotonesContainer" unique_id=625313670]
-custom_minimum_size = Vector2(260, 48)
+custom_minimum_size = Vector2(260, 60)
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 3
@@ -86,7 +86,7 @@ text = "1.ª Ley: Ley de Inercia"
 script = ExtResource("6_0qwxx")
 
 [node name="BotonLey2" type="Button" parent="CentroContenedor/BotonesContainer" unique_id=1131779003]
-custom_minimum_size = Vector2(260, 48)
+custom_minimum_size = Vector2(260, 60)
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 3
@@ -94,7 +94,7 @@ text = "2.ª Ley: Fuerza y Aceleración"
 script = ExtResource("6_0qwxx")
 
 [node name="BotonLey3" type="Button" parent="CentroContenedor/BotonesContainer" unique_id=286756404]
-custom_minimum_size = Vector2(260, 48)
+custom_minimum_size = Vector2(260, 60)
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 3
@@ -102,7 +102,7 @@ text = "3.ª Ley: Acción y Reacción"
 script = ExtResource("6_0qwxx")
 
 [node name="BotonBillar" type="Button" parent="CentroContenedor/BotonesContainer" unique_id=1797910816]
-custom_minimum_size = Vector2(300, 48)
+custom_minimum_size = Vector2(300, 60)
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 3
