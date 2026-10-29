@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://cg3b0tpr3m4ii"]
+
+[ext_resource type="PackedScene" uid="uid://b2t5ws55v1v0u" path="res://Escenas/BotonRegresar.tscn" id="1_sfbsm"]
+[ext_resource type="Script" uid="uid://c6c8twrb8g4eh" path="res://Escenas/Minijuegos/ProyectilCanon.gd" id="2_sdckd"]
+[ext_resource type="Script" uid="uid://cc5owjo6cnnrl" path="res://Escenas/Minijuegos/ControlCanon.gd" id="3_control"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tvg47"]
+friction = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wkxb7"]
+size = Vector2(1280, 40)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_721n3"]
+radius = 22.0
+
+[node name="Minijuego2FuerzaMasa" type="Node2D" unique_id=1434605762]
+script = ExtResource("3_control")
+
+[node name="UI_Navegacion" parent="." unique_id=1378265786 instance=ExtResource("1_sfbsm")]
+
+[node name="Escenario" type="Node2D" parent="." unique_id=814485273]
+
+[node name="Suelo" type="StaticBody2D" parent="Escenario" unique_id=727389965]
+position = Vector2(640, 600)
+physics_material_override = SubResource("PhysicsMaterial_tvg47")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Escenario/Suelo" unique_id=164998074]
+shape = SubResource("RectangleShape2D_wkxb7")
+
+[node name="SueloVisual" type="Polygon2D" parent="Escenario/Suelo" unique_id=605036254]
+color = Color(0.39607844, 0.72156864, 0.3529412, 1)
+polygon = PackedVector2Array(-640, -20, 640, -20, 640, 20, -640, 20)
+
+[node name="Proyectil" type="RigidBody2D" parent="Escenario" unique_id=67154013]
+position = Vector2(190, 440)
+can_sleep = false
+lock_rotation = true
+continuous_cd = 2
+linear_damp_mode = 1
+script = ExtResource("2_sdckd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Escenario/Proyectil" unique_id=187243425]
+shape = SubResource("CircleShape2D_721n3")
+
+[node name="CajaVisual" type="Polygon2D" parent="Escenario/Proyectil" unique_id=1246548788]
+color = Color(0.972549, 0.4745098, 0.21568628, 1)
+antialiased = true
+polygon = PackedVector2Array(22, 0, 19, 11, 11, 19, 0, 22, -11, 19, -19, 11, -22, 0, -19, -11, -11, -19, 0, -22, 11, -19, 19, -11)
+uv = PackedVector2Array(70, -1)
+
+[node name="Canon" type="Node2D" parent="Escenario" unique_id=323150250]
+position = Vector2(120, 510)
+
+[node name="CanonVisual" type="Polygon2D" parent="Escenario/Canon" unique_id=643488364]
+color = Color(0.3372549, 0.49803922, 0.65882355, 1)
+polygon = PackedVector2Array(-15, -15, 85, -65, 100, -35, 0, 15)
+
+[node name="BaseCanon" type="Polygon2D" parent="Escenario/Canon" unique_id=1979535543]
+color = Color(0.20392157, 0.29411766, 0.4392157, 1)
+polygon = PackedVector2Array(-35, -5, 35, -5, 35, 25, -35, 25)
+
+[node name="RuedaCanon" type="Polygon2D" parent="Escenario/Canon" unique_id=135769974]
+position = Vector2(0, 15)
+color = Color(0.9607843, 0.72156864, 0.25490198, 1)
+polygon = PackedVector2Array(20, 0, 17.3, 10, 10, 17.3, 0, 20, -10, 17.3, -17.3, 10, -20, 0, -17.3, -10, -10, -17.3, 0, -20, 10, -17.3, 17.3, -10)
+
+[node name="CentroRueda" type="Polygon2D" parent="Escenario/Canon" unique_id=648569956]
+position = Vector2(0, 15)
+color = Color(0.14117648, 0.21176471, 0.32941177, 1)
+polygon = PackedVector2Array(9, 0, 6.4, 6.4, 0, 9, -6.4, 6.4, -9, 0, -6.4, -6.4, 0, -9, 6.4, -6.4)
