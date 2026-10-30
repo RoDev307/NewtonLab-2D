@@ -2,7 +2,7 @@ extends Control
 
 # Rutas de las escenas a las que conducirá cada botón
 const RUTA_LEY_1: String = "res://Escenas/Minijuegos/Minijuego1_Inercia.tscn"
-const RUTA_LEY_2: String = "res://Escenas/Minijuegos/Minijuego2_FuerzaMasa.tscn"
+const RUTA_LEY_2: String = "res://Escenas/Minijuegos/Minijuego2_Canon.tscn"
 const RUTA_LEY_3: String = "res://Escenas/Minijuegos/Minijuego3_AccionReaccion.tscn"
 const RUTA_BILLAR: String = "res://Escenas/Minijuegos/Minijuego_BillarCompleto.tscn"
 
