@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d5vemt06f1ak"
+path="res://.godot/imported/Week 14 - Lift You Up MELODY.ogg-0c74889b5a563b48fcc8cc3db0d682b9.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/Week 14 - Lift You Up MELODY.ogg"
+dest_files=["res://.godot/imported/Week 14 - Lift You Up MELODY.ogg-0c74889b5a563b48fcc8cc3db0d682b9.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

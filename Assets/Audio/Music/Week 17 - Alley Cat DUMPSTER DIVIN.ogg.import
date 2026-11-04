@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dfo16hdlxgv5o"
+path="res://.godot/imported/Week 17 - Alley Cat DUMPSTER DIVIN.ogg-bf9f76e84d533d51f1fc2edd6a5fcbe4.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/Week 17 - Alley Cat DUMPSTER DIVIN.ogg"
+dest_files=["res://.godot/imported/Week 17 - Alley Cat DUMPSTER DIVIN.ogg-bf9f76e84d533d51f1fc2edd6a5fcbe4.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

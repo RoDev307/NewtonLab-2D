@@ -15,10 +15,16 @@ run/main_scene="uid://b37xmhtjwe6s2"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 
+[audio]
+
+general/default_playback_type.web=0
+driver/mix_rate.web=44100
+
 [display]
 
+window/size/viewport_height=720
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
+mouse_cursor/custom_image="uid://c6mt20hvolb8g"
 
 [physics]
 
@@ -28,4 +34,4 @@ window/stretch/aspect="expand"
 [rendering]
 
 rendering_device/driver.windows="d3d12"
-renderer/rendering_method="mobile"
+renderer/rendering_method="gl_compatibility"

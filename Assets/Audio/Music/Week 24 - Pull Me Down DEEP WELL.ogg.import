@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://byqcugnc40ceg"
+path="res://.godot/imported/Week 24 - Pull Me Down DEEP WELL.ogg-c0ffdb49a508d96ed2d82663966c261a.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/Week 24 - Pull Me Down DEEP WELL.ogg"
+dest_files=["res://.godot/imported/Week 24 - Pull Me Down DEEP WELL.ogg-c0ffdb49a508d96ed2d82663966c261a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://r4lkuw8k1oyb"
+path="res://.godot/imported/Week 23 - Workshop BREADBOARD.ogg-c868c3c0d81e21cdcded8d0122588ae6.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/Week 23 - Workshop BREADBOARD.ogg"
+dest_files=["res://.godot/imported/Week 23 - Workshop BREADBOARD.ogg-c868c3c0d81e21cdcded8d0122588ae6.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

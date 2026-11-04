@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ds0v00joshi72"
+path="res://.godot/imported/Quit Out.wav-46e82b35b347d25fc1f9885079472b71.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/UI & Menus/Quit Out.wav"
+dest_files=["res://.godot/imported/Quit Out.wav-46e82b35b347d25fc1f9885079472b71.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://n1s8o4aorf4e"]
+
+[ext_resource type="Script" uid="uid://d0d0kaloj5j2m" path="res://Escenas/Minijuegos/enemigo.gd" id="1_h4p7n"]
+[ext_resource type="Texture2D" uid="uid://bw3tc52683xxq" path="res://Assets/Escenarios/Espacial/PNG/Default/enemy_A.png" id="2_enemigo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_enemigo"]
+size = Vector2(30, 30)
+
+[node name="Enemigo" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 7
+motion_mode = 1
+script = ExtResource("1_h4p7n")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0.4, 0.4, 1)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_enemigo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_enemigo")

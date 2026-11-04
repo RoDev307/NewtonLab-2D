@@ -1,7 +1,75 @@
 [gd_scene format=3 uid="uid://jws0olryeycq"]
 
 [ext_resource type="PackedScene" uid="uid://b2t5ws55v1v0u" path="res://Escenas/BotonRegresar.tscn" id="1_7lkn6"]
+[ext_resource type="Script" uid="uid://dxe6gbihsop70" path="res://Escenas/Minijuegos/minijuego_3.gd" id="1_mj3"]
+[ext_resource type="Texture2D" uid="uid://cflmnafv7pfm7" path="res://Assets/BG/Skyboxes/Skyboxes/skybox-space-nebula.png" id="2_fondo"]
+[ext_resource type="Script" uid="uid://c6iyn1ao1idkw" path="res://Escenas/Minijuegos/nave_jugador.gd" id="2_rcaj4"]
+[ext_resource type="Script" uid="uid://bxbuyeaw2fsi4" path="res://Escenas/Minijuegos/generador_enemigos.gd" id="4_nuwxi"]
+[ext_resource type="Texture2D" uid="uid://1pmo5jt6m7t7" path="res://Assets/Escenarios/Espacial/PNG/Default/ship_G.png" id="5_nave"]
+[ext_resource type="Script" uid="uid://h6yyf4dy6nsr" path="res://Escenas/Minijuegos/asteroides_fondo.gd" id="6_ast"]
+[ext_resource type="AudioStream" uid="uid://bjq51m6vtfikw" path="res://Assets/Audio/Music/Week 21 - Freefall GLIDE.ogg" id="8_kc82o"]
 
-[node name="Minijuego1Inercia" type="Node2D" unique_id=1434605762]
+[node name="Minijuego3AccionReaccion" type="Node2D" unique_id=125333118]
+script = ExtResource("1_mj3")
 
-[node name="UI_Navegacion" parent="." unique_id=1378265786 instance=ExtResource("1_7lkn6")]
+[node name="Fondo" type="CanvasLayer" parent="." unique_id=1872715444]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="Fondo" unique_id=685275001]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_fondo")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="UI_Navegacion" parent="." unique_id=1462902551 instance=ExtResource("1_7lkn6")]
+
+[node name="Asteroides" type="Node2D" parent="." unique_id=1358088394]
+z_index = -1
+script = ExtResource("6_ast")
+
+[node name="naveJugador" type="CharacterBody2D" parent="." unique_id=2048741104]
+position = Vector2(576, 324)
+collision_mask = 4
+motion_mode = 1
+script = ExtResource("2_rcaj4")
+
+[node name="Sprite2D" type="Sprite2D" parent="naveJugador" unique_id=542071676]
+modulate = Color(0.55, 0.85, 1, 1)
+rotation = 1.5708
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("5_nave")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="naveJugador" unique_id=2107802691]
+polygon = PackedVector2Array(22, 0, -14, -15, -14, 15)
+
+[node name="generadorEnemigos" type="Node2D" parent="." unique_id=1600612042]
+script = ExtResource("4_nuwxi")
+
+[node name="Timer" type="Timer" parent="generadorEnemigos" unique_id=1174342030]
+wait_time = 1.5
+autostart = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=645241278]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=432881346 groups=["contador_ui"]]
+offset_left = 438.0
+offset_top = 27.0
+offset_right = 710.0
+offset_bottom = 61.0
+theme_override_font_sizes/font_size = 24
+text = "Enemigos eliminados: 0"
+
+[node name="MusicaFondo" type="AudioStreamPlayer" parent="." unique_id=684830508]
+stream = ExtResource("8_kc82o")
+bus = &"Musica"
+parameters/looping = true
+
+[node name="SFX" type="AudioStreamPlayer" parent="." unique_id=404033038]
+max_polyphony = 6
+bus = &"UI"
+
+[connection signal="timeout" from="generadorEnemigos/Timer" to="generadorEnemigos" method="_on_timer_timeout"]
