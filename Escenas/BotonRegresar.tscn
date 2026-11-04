@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://blwy2dq5m3jmv" path="res://Assets/MenuUI/Icon51.png" id="1_ido4f"]
 [ext_resource type="Script" uid="uid://de04b1plq2x3h" path="res://Escenas/BotonRegresar.gd" id="1_j8e4v"]
 [ext_resource type="Script" uid="uid://cr753dviq5ily" path="res://Scripts/BotonEscalar.gd" id="3_fo4vx"]
+[ext_resource type="AudioStream" uid="uid://djtx12tsgnec0" path="res://Assets/Audio/UI & Menus/Click Bounce.wav" id="4_sma1r"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gdyll"]
 
@@ -23,3 +24,7 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_0qwxx")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_jmp4w")
 icon = ExtResource("1_ido4f")
 script = ExtResource("3_fo4vx")
+
+[node name="AudioClic" type="AudioStreamPlayer" parent="." unique_id=1883610183]
+stream = ExtResource("4_sma1r")
+bus = &"UI"

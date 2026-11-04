@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://7ilfnjq8kwvp"
+path="res://.godot/imported/Week 25 - Have A Great Summer POOL PARTY.ogg-760b187ae10b29e04af0a1511aa2f983.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/Week 25 - Have A Great Summer POOL PARTY.ogg"
+dest_files=["res://.godot/imported/Week 25 - Have A Great Summer POOL PARTY.ogg-760b187ae10b29e04af0a1511aa2f983.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dhwa7axj0l57r"
+path="res://.godot/imported/Week 16 - Vacation Day ADVENTURE.ogg-e897a022ea123546c5a74520cf20897e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/Week 16 - Vacation Day ADVENTURE.ogg"
+dest_files=["res://.godot/imported/Week 16 - Vacation Day ADVENTURE.ogg-e897a022ea123546c5a74520cf20897e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

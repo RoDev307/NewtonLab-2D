@@ -6,12 +6,25 @@
 [ext_resource type="Texture2D" uid="uid://cflmnafv7pfm7" path="res://Assets/BG/Skyboxes/Skyboxes/skybox-space-nebula.png" id="3_0qwxx"]
 [ext_resource type="Texture2D" uid="uid://b1t5cy7djle41" path="res://Assets/MenuUI/Icon35.png" id="5_gdyll"]
 [ext_resource type="Script" uid="uid://cr753dviq5ily" path="res://Scripts/BotonEscalar.gd" id="6_0qwxx"]
+[ext_resource type="Texture2D" uid="uid://ci0iu8krv50mw" path="res://Assets/MenuUI/Icon29.png" id="7_cq8l1"]
+[ext_resource type="AudioStream" uid="uid://djtx12tsgnec0" path="res://Assets/Audio/UI & Menus/Click Bounce.wav" id="7_jmp4w"]
+[ext_resource type="Texture2D" uid="uid://cxmojh4cvnegh" path="res://Assets/MenuUI/Icon12.png" id="8_84324"]
+[ext_resource type="AudioStream" uid="uid://dfo16hdlxgv5o" path="res://Assets/Audio/Music/Week 17 - Alley Cat DUMPSTER DIVIN.ogg" id="8_vmlkd"]
+[ext_resource type="Texture2D" uid="uid://wk4f1mhcpcoj" path="res://Assets/MenuUI/Msg17.png" id="12_7n3fc"]
+[ext_resource type="Texture2D" uid="uid://dfpolqq8wscas" path="res://Assets/MenuUI/Slider05.png" id="13_pskqo"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j8e4v"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fo4vx"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gdyll"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4mnnu"]
+texture = ExtResource("12_7n3fc")
+texture_margin_left = 20.0
+texture_margin_top = 45.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
 
 [node name="MenuPrincipal" type="Control" unique_id=910888633]
 layout_mode = 3
@@ -25,6 +38,7 @@ theme = ExtResource("1_shwl5")
 script = ExtResource("1_iq5l4")
 
 [node name="Fondo" type="TextureRect" parent="." unique_id=1529032731]
+z_index = -1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -47,6 +61,7 @@ texture = ExtResource("2_shwl5")
 expand_mode = 1
 
 [node name="BotonCerrar" type="Button" parent="." unique_id=275254044]
+visible = false
 custom_minimum_size = Vector2(36, 36)
 layout_mode = 1
 anchors_preset = 1
@@ -63,6 +78,37 @@ icon = ExtResource("5_gdyll")
 icon_alignment = 1
 script = ExtResource("6_0qwxx")
 
+[node name="BotonCreditos" type="Button" parent="." unique_id=1513163321]
+z_index = 1
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 1
+offset_right = 104.0
+offset_bottom = 90.0
+offset_transform_position = Vector2(-10, 15)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_j8e4v")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_fo4vx")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_gdyll")
+icon = ExtResource("7_cq8l1")
+icon_alignment = 1
+script = ExtResource("6_0qwxx")
+
+[node name="BotonConfiguracion" type="Button" parent="." unique_id=39118009]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -104.0
+offset_bottom = 90.0
+grow_horizontal = 0
+offset_transform_position = Vector2(-10, 15)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_j8e4v")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_fo4vx")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_gdyll")
+icon = ExtResource("8_84324")
+icon_alignment = 1
+script = ExtResource("6_0qwxx")
+
 [node name="CentroContenedor" type="CenterContainer" parent="." unique_id=1099020289]
 layout_mode = 1
 anchors_preset = -1
@@ -71,40 +117,205 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = 43.944
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
+mouse_filter = 2
 
 [node name="BotonesContainer" type="VBoxContainer" parent="CentroContenedor" unique_id=1658971096]
 layout_mode = 2
 theme_override_constants/separation = 10
 
 [node name="BotonLey1" type="Button" parent="CentroContenedor/BotonesContainer" unique_id=625313670]
-custom_minimum_size = Vector2(260, 60)
+custom_minimum_size = Vector2(300, 80)
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 21
 text = "1.ª Ley: Ley de Inercia"
 script = ExtResource("6_0qwxx")
 
 [node name="BotonLey2" type="Button" parent="CentroContenedor/BotonesContainer" unique_id=1131779003]
-custom_minimum_size = Vector2(260, 60)
+custom_minimum_size = Vector2(300, 80)
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 18
 text = "2.ª Ley: Fuerza y Aceleración"
 script = ExtResource("6_0qwxx")
 
 [node name="BotonLey3" type="Button" parent="CentroContenedor/BotonesContainer" unique_id=286756404]
-custom_minimum_size = Vector2(260, 60)
+custom_minimum_size = Vector2(300, 80)
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 19
 text = "3.ª Ley: Acción y Reacción"
 script = ExtResource("6_0qwxx")
 
 [node name="BotonBillar" type="Button" parent="CentroContenedor/BotonesContainer" unique_id=1797910816]
+visible = false
 custom_minimum_size = Vector2(300, 60)
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 3
 text = "Mesa de Billar (Modo Completo)"
+script = ExtResource("6_0qwxx")
+
+[node name="AudioClic" type="AudioStreamPlayer" parent="." unique_id=263221721]
+stream = ExtResource("7_jmp4w")
+bus = &"UI"
+
+[node name="MusicaFondo" type="AudioStreamPlayer" parent="." unique_id=1114202047]
+stream = ExtResource("8_vmlkd")
+bus = &"Musica"
+parameters/looping = true
+
+[node name="PanelOpciones" type="PanelContainer" parent="." unique_id=862008149]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -177.5
+offset_top = -140.0
+offset_right = 177.5
+offset_bottom = 140.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_4mnnu")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelOpciones" unique_id=271827959]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = -25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelOpciones/MarginContainer" unique_id=2016123527]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="LabelConfiguracion" type="Label" parent="PanelOpciones/MarginContainer/VBoxContainer" unique_id=771129050]
+layout_mode = 2
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 28
+text = "Configuracion"
+horizontal_alignment = 1
+
+[node name="ContenedorMusica" type="VBoxContainer" parent="PanelOpciones/MarginContainer/VBoxContainer" unique_id=1890533680]
+layout_mode = 2
+
+[node name="LabelMusica" type="Label" parent="PanelOpciones/MarginContainer/VBoxContainer/ContenedorMusica" unique_id=1727258895]
+layout_mode = 2
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 24
+text = "Musica"
+horizontal_alignment = 1
+
+[node name="SliderMusica" type="HSlider" parent="PanelOpciones/MarginContainer/VBoxContainer/ContenedorMusica" unique_id=1812975406]
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 2
+theme_override_icons/grabber = ExtResource("13_pskqo")
+theme_override_icons/grabber_highlight = ExtResource("13_pskqo")
+theme_override_icons/grabber_disabled = ExtResource("13_pskqo")
+min_value = 0.1
+max_value = 1.0
+step = 0.05
+value = 0.7999999999999999
+
+[node name="ContenedorUI" type="VBoxContainer" parent="PanelOpciones/MarginContainer/VBoxContainer" unique_id=311094741]
+layout_mode = 2
+
+[node name="LabelUI" type="Label" parent="PanelOpciones/MarginContainer/VBoxContainer/ContenedorUI" unique_id=2099943151]
+layout_mode = 2
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 24
+text = "Interfaz"
+horizontal_alignment = 1
+
+[node name="SliderUI" type="HSlider" parent="PanelOpciones/MarginContainer/VBoxContainer/ContenedorUI" unique_id=140457589]
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 2
+theme_override_icons/grabber = ExtResource("13_pskqo")
+theme_override_icons/grabber_highlight = ExtResource("13_pskqo")
+theme_override_icons/grabber_disabled = ExtResource("13_pskqo")
+min_value = 0.1
+max_value = 1.0
+step = 0.05
+value = 0.7999999999999999
+
+[node name="BotonCerrarOpciones" type="Button" parent="PanelOpciones/MarginContainer/VBoxContainer" unique_id=1562021192]
+custom_minimum_size = Vector2(260, 60)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 23
+text = "Guardar / Volver"
+script = ExtResource("6_0qwxx")
+
+[node name="PanelCreditos" type="PanelContainer" parent="." unique_id=606290967]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -177.5
+offset_top = -140.0
+offset_right = 177.5
+offset_bottom = 140.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_4mnnu")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelCreditos" unique_id=274126075]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = -25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelCreditos/MarginContainer" unique_id=248135957]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="LabelConfiguracion" type="Label" parent="PanelCreditos/MarginContainer/VBoxContainer" unique_id=1778850095]
+layout_mode = 2
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 28
+text = "Créditos"
+horizontal_alignment = 1
+
+[node name="Label" type="RichTextLabel" parent="PanelCreditos/MarginContainer/VBoxContainer" unique_id=361363781]
+custom_minimum_size = Vector2(340, 180)
+layout_mode = 2
+bbcode_enabled = true
+text = "[center][b]DESARROLLADO POR[/b][/center]
+• Rodrigo Avelar
+• Esmeralda Escobar
+• Omar Zuniga
+• Alexander Mejía
+
+[center][b]LICENCIAS Y RECURSOS (CC0)[/b][/center]
+[b]Música:[/b]
+Abstraction Music & Tallbeard Studios
+(Public Domain - CC0 1.0)
+[i]No endorsement of NFTs or AI/Machine Learning models.[/i]
+
+[b]Audio & Interfaz Grafica:[/b]
+Kenney (www.kenney.nl)
+• UI Pack: Sci-fi (2.0)
+• Sci-Fi Sounds (1.0)
+• Skyboxes Space & Simple Space
+(Creative Commons Zero, CC0)"
+
+[node name="BotonCerrarCreditos" type="Button" parent="PanelCreditos/MarginContainer/VBoxContainer" unique_id=1391287507]
+custom_minimum_size = Vector2(260, 60)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 23
+text = "Volver"
 script = ExtResource("6_0qwxx")

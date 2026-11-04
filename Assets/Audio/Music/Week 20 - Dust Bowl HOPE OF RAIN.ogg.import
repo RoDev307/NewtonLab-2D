@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b3ebuvhsrm0r5"
+path="res://.godot/imported/Week 20 - Dust Bowl HOPE OF RAIN.ogg-1966df8daafa6c6d3b8aabc04b945648.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/Week 20 - Dust Bowl HOPE OF RAIN.ogg"
+dest_files=["res://.godot/imported/Week 20 - Dust Bowl HOPE OF RAIN.ogg-1966df8daafa6c6d3b8aabc04b945648.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

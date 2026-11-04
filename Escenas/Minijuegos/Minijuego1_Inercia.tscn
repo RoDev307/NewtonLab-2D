@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cp10wmyc1e50q" path="res://Scripts/juego.gd" id="1_gvuhb"]
 [ext_resource type="Script" uid="uid://c1tu3hf3u00yi" path="res://Scripts/bola.gd" id="2_n74ki"]
 [ext_resource type="PackedScene" uid="uid://b2t5ws55v1v0u" path="res://Escenas/BotonRegresar.tscn" id="3_w25tp"]
+[ext_resource type="AudioStream" uid="uid://dg7i27l0o15i2" path="res://Assets/Audio/Music/PiecemealCOLLECTED.ogg" id="4_rw35j"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_54wfp"]
 radius = 16.0
@@ -19,3 +20,11 @@ script = ExtResource("2_n74ki")
 shape = SubResource("CircleShape2D_54wfp")
 
 [node name="UI_Navegacion" parent="." unique_id=1378265786 instance=ExtResource("3_w25tp")]
+
+[node name="MusicaFondo" type="AudioStreamPlayer" parent="." unique_id=866583002]
+stream = ExtResource("4_rw35j")
+bus = &"Musica"
+parameters/looping = true
+
+[node name="SFX" type="AudioStreamPlayer" parent="." unique_id=652867497]
+bus = &"UI"

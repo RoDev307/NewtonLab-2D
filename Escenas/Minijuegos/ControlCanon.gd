@@ -30,15 +30,25 @@ var progreso: ProgressBar
 var cajas: Array[RigidBody2D] = []
 var origenes: Array[Vector2] = []
 var derribadas: Array[bool] = []
+var reproductor_musica: AudioStreamPlayer
 
 func _ready() -> void:
-	# Diseño local de esta escena: no modifica la configuración del proyecto.
-	var camara := Camera2D.new()
-	camara.name = "CamaraCanon"
-	camara.position = Vector2(640, 360)
-	add_child(camara)
-	get_viewport().size_changed.connect(_ajustar_vista)
-	_ajustar_vista()
+	AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), false)
+	
+	# --- MÚSICA DE FONDO DEL MINIJUEGO 2 ---
+	reproductor_musica = AudioStreamPlayer.new()
+	reproductor_musica.name = "MusicaFondoCanon"
+	reproductor_musica.process_mode = Node.PROCESS_MODE_ALWAYS
+	var idx_musica = AudioServer.get_bus_index("Musica")
+	reproductor_musica.bus = &"Musica" if idx_musica != -1 else &"Master"
+	
+	var ruta_musica := "res://Assets/Audio/Music/PrimordialSoupBASE.ogg"
+	if ResourceLoader.exists(ruta_musica):
+		reproductor_musica.stream = load(ruta_musica)
+		add_child(reproductor_musica)
+		reproductor_musica.play()
+
+	$Escenario/Suelo.physics_material_override = PhysicsMaterial.new()
 	$Escenario/Suelo.physics_material_override = PhysicsMaterial.new()
 	$Escenario/Suelo.physics_material_override.friction = 0.8
 	$Escenario/Suelo/SueloVisual.hide()
@@ -265,14 +275,20 @@ func _actualizar() -> void:
 		return
 	var angulo := angulo_slider.value
 	proyectil.angulo = angulo
-	proyectil.direccion = Vector2.RIGHT.rotated(-deg_to_rad(angulo))
-	valor_angulo.text = "  ÁNGULO: %.1f°" % angulo
+	
+	# Dirección normalizada hacia donde apunta el cañón
+	var dir := Vector2.RIGHT.rotated(-deg_to_rad(angulo))
+	proyectil.direccion = dir
+	
 	var detalle = $Escenario/Canon.get_node("Detalle")
 	detalle.angulo = angulo
 	detalle.queue_redraw()
+	
 	if not proyectil.lanzado:
-		var giro := -(deg_to_rad(angulo) - atan(0.5))
-		proyectil.position = $Escenario/Canon.position + Vector2(70, -70).rotated(giro)
+		# Posicionamos la bola en la base del cañón + una distancia a lo largo del tubo (ej. 120 px)
+		# Ajusta la posición base de pivote según las coordenadas reales del cañón en tu escena:
+		var pivote_canon: Vector2 = $Escenario/Canon.position + Vector2(20, -30) 
+		proyectil.position = pivote_canon + dir * 90.0 # 90 px recorre el tubo hasta salir por la bocao)
 	proyectil.fuerza = fuerza_slider.value
 	proyectil.mass = masa_slider.value
 	valor_fuerza.text = "FUERZA  %.0f N" % proyectil.fuerza
@@ -343,6 +359,11 @@ func _registrar_medicion(medicion: Dictionary) -> void:
 	_refrescar_comparacion()
 
 func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.pressed:
+		AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), false)
+		if is_instance_valid(reproductor_musica) and not reproductor_musica.playing:
+			reproductor_musica.play()
+			
 	if fondo_comparacion.visible:
 		if event.is_action_pressed("ui_cancel"):
 			_alternar_panel()

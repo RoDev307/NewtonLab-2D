@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ou36gq4aj0hs"
+path="res://.godot/imported/Week 18 - Distant Skyline NIGHT DRIVE.ogg-a38b89a51f82a18b94056910efded47c.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/Week 18 - Distant Skyline NIGHT DRIVE.ogg"
+dest_files=["res://.godot/imported/Week 18 - Distant Skyline NIGHT DRIVE.ogg-a38b89a51f82a18b94056910efded47c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

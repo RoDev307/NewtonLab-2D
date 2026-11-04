@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b2t5ws55v1v0u" path="res://Escenas/BotonRegresar.tscn" id="1_sfbsm"]
 [ext_resource type="Script" uid="uid://c6c8twrb8g4eh" path="res://Escenas/Minijuegos/ProyectilCanon.gd" id="2_sdckd"]
 [ext_resource type="Script" uid="uid://cc5owjo6cnnrl" path="res://Escenas/Minijuegos/ControlCanon.gd" id="3_control"]
+[ext_resource type="AudioStream" uid="uid://x7s0wcej4bxn" path="res://Assets/Audio/Music/PrimordialSoupBASE.ogg" id="4_721n3"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tvg47"]
 friction = 0.0
@@ -68,3 +69,8 @@ polygon = PackedVector2Array(20, 0, 17.3, 10, 10, 17.3, 0, 20, -10, 17.3, -17.3,
 position = Vector2(0, 15)
 color = Color(0.14117648, 0.21176471, 0.32941177, 1)
 polygon = PackedVector2Array(9, 0, 6.4, 6.4, 0, 9, -6.4, 6.4, -9, 0, -6.4, -6.4, 0, -9, 6.4, -6.4)
+
+[node name="MusicaFondo" type="AudioStreamPlayer" parent="." unique_id=127530042]
+stream = ExtResource("4_721n3")
+bus = &"Musica"
+parameters/looping = true

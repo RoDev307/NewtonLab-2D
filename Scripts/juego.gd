@@ -77,6 +77,12 @@ func _ready() -> void:
 	)
 
 	crear_audio()
+	
+	# --- INICIAR MÚSICA DEL NIVEL POR CÓDIGO ---
+	if is_instance_valid(musica):
+		musica.stream = load("res://Assets/Audio/Music/PiecemealCOLLECTED.ogg") # Ajusta a la ruta exacta de tu música
+		musica.play()
+
 	crear_interfaz()
 
 	bola.golpe_realizado.connect(al_golpear)
@@ -129,8 +135,12 @@ func _process(delta: float) -> void:
 			false
 		)
 
-
 func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.pressed:
+		AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), false)
+		if is_instance_valid(musica) and not musica.playing:
+			musica.play()
+
 	if not event is InputEventKey:
 		return
 
@@ -1909,52 +1919,51 @@ func poner_simbolo(
 # ==================================================
 
 func crear_audio() -> void:
-	# Audio temporalmente desactivado para este nivel
 	musica = AudioStreamPlayer.new()
+	musica.process_mode = Node.PROCESS_MODE_ALWAYS # Permite sonar aunque el menú pause la escena
+	var idx_musica = AudioServer.get_bus_index("Musica")
+	musica.bus = &"Musica" if idx_musica != -1 else &"Master"
 	add_child(musica)
 
 	efectos = AudioStreamPlayer.new()
+	efectos.process_mode = Node.PROCESS_MODE_ALWAYS
+	var idx_sfx = AudioServer.get_bus_index("SFX")
+	efectos.bus = &"SFX" if idx_sfx != -1 else &"Master"
 	add_child(efectos)
 
+	golpe_audio = secuencia([220, 330, 440], 0.04, false)
+	victoria_audio = secuencia([440, 554, 659, 880], 0.1, false)
+	derrota_audio = secuencia([300, 260, 220, 180], 0.12, false)
 
-func secuencia(
-	notas: Array,
-	duracion_nota: float,
-	repetir: bool = false
-) -> AudioStreamWAV:
-	const FRECUENCIA: int = 22050
+	var ruta_musica := "res://Assets/Audio/Music/PiecemealCOLLECTED.ogg"
+	if ResourceLoader.exists(ruta_musica):
+		musica.stream = load(ruta_musica)
+		musica.play()
 
-	var cantidad: int = int(
-		notas.size() * duracion_nota * FRECUENCIA
-	)
+	cambiar_musica(volumen_musica)
+	cambiar_efectos(volumen_efectos)
+
+# --- Frecuencia ajustada a 44100 Hz ---
+func secuencia(notas: Array, duracion_nota: float, repetir: bool = false) -> AudioStreamWAV:
+	const FRECUENCIA: int = 44100
+
+	var cantidad: int = int(notas.size() * duracion_nota * FRECUENCIA)
 	var datos := PackedByteArray()
 	datos.resize(cantidad * 2)
 
 	for i in range(cantidad):
 		var tiempo: float = float(i) / FRECUENCIA
-		var indice: int = mini(
-			int(tiempo / duracion_nota),
-			notas.size() - 1
-		)
-
+		var indice: int = mini(int(tiempo / duracion_nota), notas.size() - 1)
 		var frecuencia_nota: float = float(notas[indice])
 		var local: float = fmod(tiempo, duracion_nota)
 		var ataque: float = minf(local / 0.012, 1.0)
-		var salida: float = minf(
-			(duracion_nota - local) / 0.04,
-			1.0
-		)
+		var salida: float = minf((duracion_nota - local) / 0.04, 1.0)
 
 		var onda: float = sin(TAU * frecuencia_nota * tiempo)
-		onda += 0.15 * sin(
-			TAU * frecuencia_nota * 2.0 * tiempo
-		)
+		onda += 0.15 * sin(TAU * frecuencia_nota * 2.0 * tiempo)
 		onda *= maxf(ataque * salida, 0.0) * 0.2
 
-		datos.encode_s16(
-			i * 2,
-			int(clampf(onda, -1.0, 1.0) * 32767.0)
-		)
+		datos.encode_s16(i * 2, int(clampf(onda, -1.0, 1.0) * 32767.0))
 
 	var audio := AudioStreamWAV.new()
 	audio.format = AudioStreamWAV.FORMAT_16_BITS
@@ -1983,18 +1992,20 @@ func al_golpear() -> void:
 
 func cambiar_musica(valor: float) -> void:
 	volumen_musica = valor
-	musica.volume_db = (
-		-80.0 if valor <= 0.0
-		else linear_to_db(valor / 100.0)
-	)
+	if musica:
+		musica.volume_db = (
+			-80.0 if valor <= 0.0
+			else linear_to_db(valor / 100.0)
+		)
 
 
 func cambiar_efectos(valor: float) -> void:
 	volumen_efectos = valor
-	efectos.volume_db = (
-		-80.0 if valor <= 0.0
-		else linear_to_db(valor / 100.0)
-	)
+	if efectos:
+		efectos.volume_db = (
+			-80.0 if valor <= 0.0
+			else linear_to_db(valor / 100.0)
+		)
 
 
 func agregar_volumen(y: float) -> void:
