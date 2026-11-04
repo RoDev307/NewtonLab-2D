@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- LOGO -->
-<img src="[assets/logo.png](https://i.imgur.com/ApFUzFO.png)" alt="NewtonLab 2D Logo" width="180"/>
+<img src="https://i.imgur.com/ApFUzFO.png" alt="NewtonLab 2D Logo" width="180"/>
 
 # 🍎 NewtonLab 2D
 
@@ -11,7 +11,7 @@
 [![HTML5 / WebGL](https://img.shields.io/badge/Platform-Web%20HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](#)
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](#)
 
-[🎮 Jugar en itch.io]([https://tu-usuario.itch.io/tu-juego](https://ravelardev.itch.io/newtonlab2d))
+[🎮 Jugar en itch.io](https://ravelardev.itch.io/newtonlab2d)
 
 </div>
 
@@ -35,9 +35,9 @@
 
 ## 🛠️ Tecnologías Utilizadas
 
-* **Motor de Videojuegos:** Godot Engine 4.x (GDScript)
-* **Audio API:** Web Audio / AudioServer (Optimizado para HTML5)
-* **Plataformas de Exportación:** HTML5 (WebGL) / Escritorio
+- **Motor de Videojuegos:** Godot Engine 4.x (GDScript)
+- **Audio API:** Web Audio / AudioServer (Optimizado para HTML5)
+- **Plataformas de Exportación:** HTML5 (WebGL) / Escritorio
 
 ---
 
@@ -47,4 +47,4 @@ Si deseas clonar el proyecto y ejecutarlo desde el editor de Godot:
 
 1. **Clonar el repositorio:**
    ```bash
-   git clone [https://github.com/tu-usuario/tu-repositorio.git](https://github.com/tu-usuario/tu-repositorio.git)
+   git clone [https://github.com/RoDev307/NewtonLab-2D.git](https://github.com/RoDev307/NewtonLab-2D.git)
